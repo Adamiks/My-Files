@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<RecipeDefs>
+
+  <RecipeDef>
+    <defName>MakeWoodPlanks_Hand</defName>
+    <label>make wood planks</label>
+    <description>Cuts 25 logs into 75 wood planks by hand. Quite slow.</description>
+    <jobString>Making wood planks.</jobString>
+    <workAmount>1000</workAmount>
+    <workSpeedStat>TailoringSpeed</workSpeedStat>
+    <effectWorking>MakeWoodPlanks_Hand</effectWorking>
+    <soundWorking>Recipe_MakeWoodPlanks_Hand</soundWorking>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>WoodLog</li>
+          </thingDefs>
+        </filter>
+        <count>25</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>WoodLog</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+        <WoodPlank>75</WoodPlank>
+    </products>
+  </RecipeDef>
+
+
+  <RecipeDef>
+    <defName>MakeWoodPlanks_Electric</defName>
+    <label>make wood planks</label>
+    <description>Cuts 25 logs into 75 wood planks.</description>
+    <jobString>Making wood planks.</jobString>
+    <workAmount>500</workAmount>
+    <effectWorking>MakeWoodPlanks_Electric</effectWorking>
+    <soundWorking>Recipe_MakeWoodPlanks_Electric</soundWorking>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>WoodLog</li>
+          </thingDefs>
+        </filter>
+        <count>25</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>WoodLog</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+        <WoodPlank>75</WoodPlank>
+    </products>
+  </RecipeDef>
+
+
+</RecipeDefs>

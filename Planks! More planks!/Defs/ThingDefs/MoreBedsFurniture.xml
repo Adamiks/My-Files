@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Buildings>
+
+  <ThingDef Name="BuildingBase" Abstract="True">
+    <category>Building</category>
+    <thingClass>Building</thingClass>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <selectable>true</selectable>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+		<CostList>
+				<Cloth>5</Cloth>
+		</CostList>
+  </ThingDef>
+  
+  <ThingDef Name="BuildingRoyalBase" Abstract="True">
+    <category>Building</category>
+    <thingClass>Building</thingClass>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <selectable>true</selectable>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+		<CostList>
+				<Cloth>15</Cloth>
+		</CostList>
+  </ThingDef>
+  
+
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>Bed</defName>
+    <EType>Bed</EType>
+    <label>bed</label>
+    <Description>A cozy mattress and sheets on a frame for resting. Rest effectiveness: 10/10</Description>
+    <ThingClass>Building_Bed</ThingClass>
+    <graphicPath>Things/Building/Furniture/Bed/Bed</graphicPath>
+    <graphicClass>Graphic_Multi</graphicClass>
+    <shaderType>CutoutComplex</shaderType>
+    <AltitudeLayer>Waist</AltitudeLayer>
+    <statBases>
+      <MaxHealth>150</MaxHealth>
+      <Flammability>1.0</Flammability>
+      <Beauty>15</Beauty>
+      <WorkToMake>580</WorkToMake>
+      <BedRestEffectiveness>1</BedRestEffectiveness>
+    </statBases>
+    <Size>(1,2)</Size>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>WoodyPlanks</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>25</costStuffCount>
+    <graphicOverdraw>True</graphicOverdraw>
+    <building>
+      <Bed_ShowSleeperBody>False</Bed_ShowSleeperBody>
+      <Bed_HealTickInterval>2100</Bed_HealTickInterval>
+    </building>
+    <fillPercent>0.4</fillPercent>
+    <PathCost>60</PathCost>
+    <StaticSunShadowHeight>0.17</StaticSunShadowHeight>
+    <CastEdgeShadows>True</CastEdgeShadows>
+    <DesignationCategory>Furniture</DesignationCategory>
+    <Passability>PassThroughOnly</Passability>
+    <DrawGUIOverlay>True</DrawGUIOverlay>
+    <designationHotKey>B</designationHotKey>
+  </ThingDef>
+	
+
+	
+  <ThingDef ParentName="BuildingRoyalBase">
+    <defName>RoyalBed</defName>
+    <EType>Bed</EType>
+    <label>royal bed</label>
+    <Description>A luxurious bed fit for the highborn.</Description>
+    <ThingClass>Building_Bed</ThingClass>
+    <graphicPath>Things/Building/Furniture/Bed/RoyalBed</graphicPath>
+    <graphicClass>Graphic_Multi</graphicClass>
+    <shaderType>CutoutComplex</shaderType>
+    <AltitudeLayer>Waist</AltitudeLayer>
+    <statBases>
+      <MaxHealth>200</MaxHealth>
+      <Flammability>1.0</Flammability>
+      <WorkToMake>17000</WorkToMake>
+      <Beauty>60</Beauty>
+      <BedRestEffectiveness>1.05</BedRestEffectiveness>
+    </statBases>
+    <Size>(2,2)</Size>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>60</costStuffCount>
+		<CostList>
+				<Cloth>15</Cloth>
+		</CostList>
+    <graphicOverdraw>True</graphicOverdraw>
+    <building>
+      <Bed_ShowSleeperBody>False</Bed_ShowSleeperBody>
+      <Bed_HealTickInterval>2000</Bed_HealTickInterval>
+    </building>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <fillPercent>0.4</fillPercent>
+    <PathCost>60</PathCost>
+    <StaticSunShadowHeight>0.17</StaticSunShadowHeight>
+    <CastEdgeShadows>True</CastEdgeShadows>
+    <DesignationCategory>Furniture</DesignationCategory>
+    <Passability>PassThroughOnly</Passability>
+    <designationHotKey>R</designationHotKey>
+    <DrawGUIOverlay>True</DrawGUIOverlay>
+  </ThingDef>
+
+</Buildings>

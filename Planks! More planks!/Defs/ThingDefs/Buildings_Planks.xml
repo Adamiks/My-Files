@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ThingDefs>
+
+
+
+  <ThingDef Name="BuildingBase" Abstract="True">
+    <category>Building</category>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <selectable>true</selectable>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+  </ThingDef>
+
+
+
+
+  <ThingDef ParentName="BuildingBase">
+    <DefName>TableSawmillHand</DefName>
+    <EType>BuildingComplex</EType>
+    <label>hand sawmill</label>
+    <ThingClass>Building_WorkTable</ThingClass>
+    <Description>A small muscle-powered sawmill for cutting logs into wood planks.</Description>
+    <graphicPath>Things/Building/Production/TableSawmillHand</graphicPath>
+    <graphicClass>Graphic_Single</graphicClass>
+    <CostList>
+      <WoodLog>60</WoodLog>
+      <Steel>10</Steel>
+    </CostList>
+    <constructEffect>ConstructWood</constructEffect>
+    <AltitudeLayer>Waist</AltitudeLayer>
+    <fillPercent>0.5</fillPercent>
+    <UseStandardHealth>True</UseStandardHealth>
+    <statBases>
+      <WorkToMake>850</WorkToMake>
+      <MaxHealth>180</MaxHealth>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <Size>(3,1)</Size>
+    <graphicOverdraw>False</graphicOverdraw>
+    <DesignationCategory>Production</DesignationCategory>
+    <Passability>PassThroughOnly</Passability>
+    <pathCost>70</pathCost>
+    <hasInteractionCell>True</hasInteractionCell>
+    <interactionSquareOffset>(0,0,-1)</interactionSquareOffset>
+    <itemSurface>True</itemSurface>
+    <recipes>
+      <li>MakeWoodPlanks_Hand</li>
+    </recipes>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+    </building>
+  </ThingDef>
+
+
+
+  <ThingDef ParentName="BuildingBase">
+    <DefName>TableSawmillElectric</DefName>
+    <EType>BuildingComplex</EType>
+    <label>electric sawmill</label>
+    <ThingClass>Building_WorkTable</ThingClass>
+    <Description>A small electrically-powered sawmill for cutting logs into wood planks.</Description>
+    <graphicPath>Things/Building/Production/TableSawmillElectric</graphicPath>
+    <graphicClass>Graphic_Single</graphicClass>
+    <CostList>
+      <WoodLog>100</WoodLog>
+      <Steel>60</Steel>
+    </CostList>
+    <constructEffect>ConstructWood</constructEffect>
+    <AltitudeLayer>Waist</AltitudeLayer>
+    <UseStandardHealth>True</UseStandardHealth>
+    <statBases>
+      <WorkToMake>1500</WorkToMake>
+      <MaxHealth>180</MaxHealth>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <Size>(3,1)</Size>
+    <graphicOverdraw>False</graphicOverdraw>
+    <DesignationCategory>Production</DesignationCategory>
+    <Passability>PassThroughOnly</Passability>
+    <pathCost>70</pathCost>
+    <hasInteractionCell>True</hasInteractionCell>
+    <interactionSquareOffset>(0,0,-1)</interactionSquareOffset>
+    <itemSurface>True</itemSurface>
+    <recipes>
+      <li>MakeWoodPlanks_Electric</li>
+    </recipes>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+    </building>
+    <comps>
+      <li>
+        <compClass>CompPowerTrader</compClass>
+        <startElectricalFires>true</startElectricalFires>
+        <basePowerConsumption>200</basePowerConsumption>
+        <soundPowerOn>PowerOnSmall</soundPowerOn>
+        <soundPowerOff>PowerOffSmall</soundPowerOff>
+      </li>
+    </comps>
+  </ThingDef>
+
+
+  
+
+
+</ThingDefs>

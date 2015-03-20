@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <StuffCategoryDef>
+    <defName>Woody</defName>
+    <label>woody</label>
+  </StuffCategoryDef>
+
+  <StuffCategoryDef>
+    <defName>WoodyPlanks</defName>
+    <label>woodyplanks</label>
+  </StuffCategoryDef>
+
+</Defs>
