@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ThingDefs>
+
+  <ThingDef Name="BodyPartBase" Abstract="True">
+    <eType>Item</eType>
+    <label>body part</label>
+    <thingClass>ThingWithComponents</thingClass>
+    <category>Item</category>
+    <useStandardHealth>true</useStandardHealth>
+    <selectable>true</selectable>
+    <statBases>
+      <MaxHealth>50</MaxHealth>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <altitudeLayer>Item</altitudeLayer>
+    <tickerType>Never</tickerType>
+    <alwaysHaulable>true</alwaysHaulable>
+    <isBodyPart>true</isBodyPart>
+    <tradeTags>
+      <li>BodyPart</li>
+    </tradeTags>
+    <comps>
+      <li>
+        <compClass>CompForbiddable</compClass>
+      </li>
+    </comps>
+    <thingCategories>
+      <li>BodyParts</li>
+    </thingCategories>
+    <pathCost>10</pathCost>
+  </ThingDef>
+
+<!-- BodyParts-->
+  <ThingDef ParentName="BodyPartBase">
+    <defName>Torso</defName>
+    <label>torso</label>
+    <description>Torso</description>
+    <graphicPath>Things/Item/BodyPart/Organ</graphicPath>
+    <graphicClass>Graphic_Single</graphicClass>
+    <statBases>
+      <MarketValue>1500</MarketValue>
+    </statBases>
+  </ThingDef>
+
+</ThingDefs>

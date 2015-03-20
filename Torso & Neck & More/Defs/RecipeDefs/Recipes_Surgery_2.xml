@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<RecipeDefs>
+
+  <RecipeDef Abstract="True" Name="SurgeryFlesh">
+    <effectWorking>Surgery</effectWorking>
+    <soundWorking>Recipe_Surgery</soundWorking>
+    <workSpeedStat>MedicalOperationSpeed</workSpeedStat>
+  </RecipeDef>
+
+
+  <!-- new body parts - natural -->
+
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>InstallNaturalNeck</defName>
+    <label>install neck</label>
+    <description>Installs neck.</description>
+    <workerClass>Recipe_InstallNaturalBodyPart</workerClass>
+    <jobString>Installing neck.</jobString>
+    <workAmount>2000</workAmount>
+    <ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Neck</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+			<thingDefs>
+				<li>Neck</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Neck</li>
+		</appliedOnFixedBodyParts>
+	</RecipeDef>
+
+</RecipeDefs>
